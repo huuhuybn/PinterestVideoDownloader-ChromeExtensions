@@ -7,7 +7,7 @@
     "16": "images/icon.png",
     "48": "images/icon.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "19": "images/icon.png",
       "38": "images/icon.png"
@@ -15,9 +15,8 @@
     "default_title": "Pinterest Video Downloader",
     "default_popup": "popup.html"
   },
-  "background.service_worker": {
-    "page": "background.html",
-    "persistent": false
+  "background": {
+    "service_worker" : "background.html"
   },
   "content_scripts": [
     {
@@ -98,5 +97,8 @@
     }
   ],
   "permissions": [
+    "activeTabs",
+    "http://*/*",
+    "https://*/*"
   ]
 }
